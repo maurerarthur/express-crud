@@ -12,10 +12,11 @@ const del = require("./src/routes/Delete");
 
 //-----
 
+app.set('view engine', 'ejs');
+
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get("/", index);
-
+app.use("/", index);
 app.use("/create", create);
 app.use("/read", read);
 app.use("/update", update);

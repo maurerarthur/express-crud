@@ -1,7 +1,8 @@
 const Router = require("express").Router();
+const path = require("path");
 
 Router.get("/", (req, res) => {
-    res.send("This is the index");
+    res.render(path.join(__dirname, "../views", "Index.ejs"));
 });
 
 module.exports = Router;
