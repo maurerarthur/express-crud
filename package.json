@@ -1,0 +1,25 @@
+{
+  "name": "express-crud",
+  "version": "1.0.0",
+  "description": "Simple Node.js + ExpressJS crud boilerplate with MongoDB as database",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maurerarthur/express-crud.git"
+  },
+  "author": "Arthur Maurer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maurerarthur/express-crud/issues"
+  },
+  "homepage": "https://github.com/maurerarthur/express-crud#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9"
+  }
+}
