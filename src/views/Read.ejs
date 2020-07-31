@@ -6,29 +6,39 @@
             <h3>Registered Products</h3>
         </div>
 
-        <table class="table table-striped">
+        <form method="POST" action="/delete" class="col-12 w-100">
 
-            <thead>
-                <tr>
-                    <th scope="col">Product</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Quantity</th>
-                </tr>
-            </thead>
+            <table class="table table-striped table-hover">
 
-            <tbody>
-
-                <% productList.forEach(i => { %>
+                <thead>
                     <tr>
-                        <th scope="row"><%= i.product %></th>
-                        <td><%= i.description %></td>
-                        <td><%= i.quantity %></td>
+                        <th scope="col">Product</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Delete</th>
                     </tr>
-                <% }); %>
+                </thead>
 
-            </tbody>
+                <tbody>
 
-        </table>
+                    <% productList.forEach(i => { %>
+                        <tr>
+                            <th><%= i.product %></th>
+                            <td><%= i.description %></td>
+                            <td><%= i.quantity %></td>
+                            <td>
+                                <button value="<%= i._id %>" type="submit" name="deletedProduct" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    <% }); %>
+
+                </tbody>
+
+            </table>
+
+        </form>
 
     </div>
 
