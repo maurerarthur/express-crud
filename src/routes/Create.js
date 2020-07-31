@@ -1,7 +1,7 @@
 const Router = require("express").Router();
 const database = require("../../ConnectionFactory.js");
 
-let Connection = new database();
+const Connection = new database();
 
 Router.post("/", async(req, res) => {
 
