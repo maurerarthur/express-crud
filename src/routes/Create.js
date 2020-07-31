@@ -3,12 +3,19 @@ const database = require("../../ConnectionFactory.js");
 
 let Connection = new database();
 
-Router.get("/", async (req, res) => {
+Router.post("/", async(req, res) => {
+
+    const productDetails = {
+        product: req.body.product,
+        description: req.body.description,
+        quantity: req.body.quantity
+    };
 
     const conn = await Connection.Mongo();
-    console.log(conn.db("crud").collection("things"));
 
-    res.send("Create");
+    conn.db("crud").collection("products").insertOne(productDetails).then(() => {
+        res.redirect("/");
+    });
 
 });
 
