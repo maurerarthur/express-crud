@@ -27,7 +27,7 @@
                             <td><%= i.description %></td>
                             <td><%= i.quantity %></td>
                             <td>
-                                <button value="<%= i._id %>" type="submit" name="deletedProduct" class="btn btn-danger">
+                                <button value="<%= i._id %>" type="submit" name="deletedProduct" class="btn btn-danger" onclick="return window.confirm('Are you sure you want to delete this product?');">
                                     <i class="fas fa-trash"></i>
                                 </button>
                             </td>
