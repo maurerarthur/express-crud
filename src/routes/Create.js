@@ -3,7 +3,7 @@ const database = require("../../ConnectionFactory.js");
 
 const Connection = new database();
 
-Router.post("/", async(req, res) => {
+Router.post("/", async (req, res) => {
 
     const productDetails = {
         product: req.body.product,
